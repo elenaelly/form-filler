@@ -101,14 +101,14 @@
             i = "+1 (XxX) XxX-XxxX",
             o = {
                 type: "email",
-                name: "Email Address",
+                name: "Email",
                 match: ["email"],
                 emailPrefix: "",
                 emailUsername: "random",
-                emailUsernameList: ["jack", "jill"],
+                emailUsernameList: ["email", "firstname.lastname", "1234567890", "firstname-lastname", "firstname_lastname", "firstname+lastname", "x", "user-", "email@domain", ".email", "email.", "email..email"],
                 emailUsernameRegEx: "",
                 emailHostname: "list",
-                emailHostnameList: ["mailinator.com"]
+                emailHostnameList: ["domain.com", "subdomain.domain.com", "123.123.123.123", "domain-one.com", "domain.name", "domain.co.jp", "localhost", ".domain.com", "domain..com"]
             },
             a = function () {
                 var t = {
@@ -139,39 +139,39 @@
                 };
                 return t.fields.push({
                     type: "username",
-                    name: "Username",
+                    name: "Юзернейм",
                     match: ["userid", "username"]
                 }),
                 t.fields.push({
                     type: "first-name",
-                    name: "First Name",
+                    name: "Имя",
                     match: ["firstname"]
                 }),
                 t.fields.push({
                     type: "last-name",
-                    name: "Last Name",
+                    name: "Фамилия",
                     match: ["lastname", "surname", "secondname"]
                 }),
                 t.fields.push(o),
                 t.fields.push({
                     type: "organization",
-                    name: "Organization or Company Name",
+                    name: "Компания/организация",
                     match: ["organization", "organisation", "company"]
                 }),
                 t.fields.push({
                     type: "full-name",
-                    name: "Full Name",
+                    name: "Полное имя",
                     match: ["fullname", "name"]
                 }),
                 t.fields.push({
                     type: "telephone",
-                    name: "Telephone Number",
+                    name: "Телефон",
                     match: ["phone", "fax"],
-                    template: "+1 (XxX) XxX-XxxX"
+                    template: "+7 (xxx) xxx-xx-xx"
                 }),
                 t.fields.push({
                     type: "number",
-                    name: "A Random Number between 1 and 1000",
+                    name: "Рэндомное число от 1 до 1000",
                     match: ["integer", "number", "numeric", "income", "price", "qty", "quantity"],
                     min: 1,
                     max: 1e3,
@@ -179,23 +179,23 @@
                 }),
                 t.fields.push({
                     type: "number",
-                    name: "Zip Code",
+                    name: "Индекс",
                     match: ["zip"],
-                    min: 1e4,
-                    max: 99999,
+                    min: 101000,
+                    max: 694000,
                     decimalPlaces: 0
                 }),
                 t.fields.push({
                     type: "number",
-                    name: "Day",
+                    name: "День",
                     match: ["day"],
                     min: 1,
-                    max: 28,
+                    max: 31,
                     decimalPlaces: 0
                 }),
                 t.fields.push({
                     type: "number",
-                    name: "Month",
+                    name: "Месяц",
                     match: ["month"],
                     min: 1,
                     max: 12,
@@ -203,34 +203,34 @@
                 }),
                 t.fields.push({
                     type: "number",
-                    name: "Year",
+                    name: "Год",
                     match: ["year"],
                     min: 1970,
-                    max: 2019,
+                    max: 2025,
                     decimalPlaces: 0
                 }),
                 t.fields.push({
                     type: "date",
-                    name: "Date",
+                    name: "Дата",
                     match: ["date"],
                     minDate: "1970-01-01",
                     max: 0,
-                    template: "DD-MMM-YYYY"
+                    template: "DD.MM.YYYY"
                 }),
                 t.fields.push({
                     type: "url",
-                    name: "Website Address",
+                    name: "URL",
                     match: ["website"]
                 }),
                 t.fields.push({
                     type: "regex",
-                    name: "Address Line 1",
+                    name: "Адрес",
                     match: ["address1", "addressline1"],
-                    template: "([1-9][0-9][0-9]?) (North |East |West |South |||||)(Green |White |Rocky ||||||||)(Nobel|Fabien|Hague|Oak|Second|First|Cowley|Clarendon|New|Old|Milton) (Avenue|Boulevard|Court|Drive|Extension|Freeway|Lane|Parkway|Road|Street)"
+                    template: "(ул. Молодежная|ул. Центральная|ул. Советская|ул. Садовая|ул. Школьная|ул. Лесная|ул. Заречная|ул. Ленина|ул. Мира|пр. Ленина|пр. Гагарина|пр. Бакунина|пр. Большевиков|пр. Ветеранов|Владимирский пр.|Вознесенский пр.|Гражданский пр.|Агатов пер.|Альпийский пер.|Басков пер.) (д. )([1-9][0-9][0-9]?) (кв. )([1-9][0-9][0-9]?)"
                 }),
                 t.fields.push({
                     type: "regex",
-                    name: "P.O. Box",
+                    name: "Почтовый ящик",
                     match: ["pobox", "postbox"],
                     template: "((P\\.O\\.)|(PO)) Box [1-9][0-9]{0,4}"
                 }),
@@ -249,15 +249,15 @@
                 chrome.contextMenus.removeAll(),
                 t && (chrome.contextMenus.create({
                         id: "fake-filler-all",
-                        title: "Fill all inputs",
+                        title: "Заполнить все поля",
                         contexts: ["page", "editable"]
                     }), chrome.contextMenus.create({
                         id: "fake-filler-form",
-                        title: "Fill this form",
+                        title: "Заполнить форму",
                         contexts: ["editable"]
                     }), chrome.contextMenus.create({
                         id: "fake-filler-input",
-                        title: "Fill this input",
+                        title: "Заполнить поле",
                         contexts: ["editable"]
                     }))
             },
@@ -572,7 +572,7 @@
                                         return "MMMM" === t || "MM" === t || "DD" === t || "dddd" === t ? t.slice(1) : t
                                     })).join(""), this._longDateFormat[t])
                     }
-                    var z = "Invalid date";
+                    var z = "Неверная дата";
                     function K() {
                         return this._invalidDate
                     }
@@ -582,22 +582,22 @@
                         return this._ordinal.replace("%d", t)
                     }
                     var Z = {
-                        future: "in %s",
-                        past: "%s ago",
-                        s: "a few seconds",
-                        ss: "%d seconds",
-                        m: "a minute",
-                        mm: "%d minutes",
-                        h: "an hour",
-                        hh: "%d hours",
-                        d: "a day",
-                        dd: "%d days",
-                        w: "a week",
-                        ww: "%d weeks",
-                        M: "a month",
-                        MM: "%d months",
-                        y: "a year",
-                        yy: "%d years"
+                        future: "через %с",
+                        past: "%с назад",
+                        s: "%с с",
+                        ss: "%d с",
+                        m: "минута",
+                        mm: "%d минут",
+                        h: "час",
+                        hh: "%d часов",
+                        d: "день",
+                        dd: "%d дней",
+                        w: "неделя",
+                        ww: "%d недель",
+                        M: "месяц",
+                        MM: "%d месяцев",
+                        y: "a год",
+                        yy: "%d лет"
                     };
                     function $(t, e, n, r) {
                         var i = this._relativeTime[n];

@@ -182,8 +182,8 @@
                 type: "number",
                 name: "Индекс",
                 match: ["zip"],
-                min: 101,
-                max: 694,
+                min: 101000,
+                max: 694000,
                 decimalPlaces: 0
             }),
             t.fields.push({
@@ -777,7 +777,7 @@
                 return function (s) {
                     return function (o) {
                         if (n)
-                            throw new TypeError("Generator is already executing.");
+                            throw new TypeError("Генератор уже выполняется");
                         for (; a; )
                             try {
                                 if (n = 1, r && (i = 2 & o[0] ? r.return : o[0] ? r.throw || ((i = r.return) && i.call(r), 0) : r.next) && !(i = i.call(r, o[1])).done)
@@ -865,7 +865,7 @@
                         }
                     }
                 };
-            throw new TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.")
+            throw new TypeError(e ? "Объект не может повторяться" : "Symbol.iterator is not defined.")
         }
         function v(t, e) {
             var n = "function" == typeof Symbol && t[Symbol.iterator];
