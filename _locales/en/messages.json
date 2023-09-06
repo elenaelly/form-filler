@@ -1,0 +1,641 @@
+{
+  "extensionName": {
+    "message": "Fake Filler"
+  },
+  "extensionName_short": {
+    "message": "Fake Filler"
+  },
+  "extensionDescription": {
+    "message": "A form filler that fills all inputs on a page with fake/dummy data."
+  },
+  "browserActionTitle": {
+    "message": "Заполнить все поля рэндомными данными"
+  },
+  "commands_FillThisForm": {
+    "message": "Заполнить форму"
+  },
+  "commands_fillThisInput": {
+    "message": "Заполнить это поле"
+  },
+  "commands_fillAllInputs": {
+    "message": "Заполнить все поля"
+  },
+  "bgPage_errorMigratingOptions": {
+    "message": "Возникла ошибка при миграции настроек: $1"
+  },
+  "close": {
+    "message": "Закрыть"
+  },
+  "cancel": {
+    "message": "Отменить"
+  },
+  "save": {
+    "message": "Сохранить"
+  },
+  "saveSettings": {
+    "message": "Сохранить настройки"
+  },
+  "reset": {
+    "message": "Сбросить"
+  },
+  "edit": {
+    "message": "Изменить"
+  },
+  "move": {
+    "message": "Переместить"
+  },
+  "delete": {
+    "message": "Удалить"
+  },
+  "loading": {
+    "message": "Загрузка..."
+  },
+  "testMe": {
+    "message": "Протестировать"
+  },
+  "enterCsv": {
+    "message": "Введите значения, разделенные запятой."
+  },
+  "leftNav_General": {
+    "message": "Общие"
+  },
+  "leftNav_customFields": {
+    "message": "Польз. поля"
+  },
+  "leftNav_keyboardShortcuts": {
+    "message": "Горячие клавиши"
+  },
+  "leftNav_backupRestore": {
+    "message": "Бэкап и восстановление"
+  },
+  "leftNav_restoreFactorySettings": {
+    "message": "Сбросить настройки"
+  },
+  "leftNav_changelog": {
+    "message": "Changelog"
+  },
+  "leftNav_issueTracker": {
+    "message": "Issue Tracker"
+  },
+  "leftNav_confirmResetSettings": {
+    "message": "Сбросить настройки?"
+  },
+  "leftNav_sendFeedback": {
+    "message": "If you have any suggestions to make this extension better, or find any issues, please send me an <a href=\"mailto:$1\">email</a>."
+  },
+  "backupRestore_title": {
+    "message": "Бэкап и восстановление"
+  },
+  "backupRestore_exportSettings": {
+    "message": "Экспортировать настройки"
+  },
+  "backupRestore_importSettings": {
+    "message": "Импортировать настройки"
+  },
+  "backupRestore_errorCreatingBackupFile": {
+    "message": "Ошибка при создании бэкапа: $1"
+  },
+  "backupRestore_settingImportSuccessMessage": {
+    "message": "Импорт успешно завершен! Перезагрузите активные вкладки, чтобы изменения вступили в силу"
+  },
+  "backupRestore_confirmRestore": {
+    "message": "Восстановить настройки?\n\n Текущие настройки будут сброшены"
+  },
+  "backupRestore_errorImporting": {
+    "message": "Ошибка импорта из файла: $1"
+  },
+  "backupRestore_errorReadingFile": {
+    "message": "Ошибка чтения файла"
+  },
+  "backupRestore_copyAndSaveToFile": {
+    "message": "Скопируйте и сохраните в текстовый файл"
+  },
+  "backupRestore_continueAnyway": {
+    "message": "Все равно продолжить"
+  },
+  "backupRestore_confirmImportOldBackup": {
+    "message": "Вы точно уверены? Восстановление этого бэкапа может вызвать ошибку"
+  },
+  "backupRestore_oldBackupErrorMessage": {
+    "message": "Файл был создан с использованием старой версии расширения, поэтому не может быть импортирован."
+  },
+  "kbdShortcuts_title": {
+    "message": "Горячие клавиши"
+  },
+  "kbdShortcuts_changeInstructions": {
+    "message": "<a href=\"https://github.com/FakeFiller/fake-filler-extension/wiki/Keyboard-Shortcuts\" target=\"_blank\" rel=\"noopener noreferrer\">Изменить горячие клавиши</a>"
+  },
+  "kbdShortcuts_notSet": {
+    "message": "Не установлено"
+  },
+  "customFieldDetails_title": {
+    "message": "Инфо о польз. полях"
+  },
+  "customFields_title": {
+    "message": "Польз. поля"
+  },
+  "customFields_intro": {
+    "message": "Fake Filler может использовать значения ID, NAME и CLASS полей в добавок к названию поля, чтобы определить тип данных."
+  },
+  "customFields_getMoreInfo": {
+    "message": "Больше информации о том, как расширение определяет польз. поля"
+  },
+  "customFields_addFieldButtonText": {
+    "message": "Добавить поле"
+  },
+  "customFields_validation_missingType": {
+    "message": "Выберите тип"
+  },
+  "customFields_validation_missingName": {
+    "message": "Введите название"
+  },
+  "customFields_validation_missingMatch": {
+    "message": "Введите значения, разделенные запятыми, или регулярное выражение."
+  },
+  "customFields_validation_missingTelephoneTemplate": {
+    "message": "Введите шаблон для номера телефона"
+  },
+  "customFields_validation_missingMinValue": {
+    "message": "Введите минимальное значение"
+  },
+  "customFields_validation_missingMaxValue": {
+    "message": "Введите максимальное значение"
+  },
+  "customFields_validation_missingMaxLength": {
+    "message": "Введите максимальную длину"
+  },
+  "customFields_validation_invalidMinMaxValue": {
+    "message": "Максимальное значение не может быть меньше минимального значения"
+  },
+  "customFields_validation_invalidMaxValue": {
+    "message": "Максимальное значение должно быть больше 1"
+  },
+  "customFields_validation_invalidMaxLengthValue": {
+    "message": "Максимальная длина должна быть больше 1"
+  },
+  "customFields_validation_missingDateTemplate": {
+    "message": "Введите шаблон даты"
+  },
+  "customFields_validation_missingAlNumTemplate": {
+    "message": "Введите шаблон для этого поля"
+  },
+  "customFields_validation_missingRegEx": {
+    "message": "Введите регулярное выражение"
+  },
+  "customFields_validation_missingRandomItems": {
+    "message": "Введите значения"
+  },
+  "customFields_validation_missingDecimalPlaces": {
+    "message": "Введите количество знаков после запятой"
+  },
+  "customFields_validation_onlyOneValueInGroup": {
+    "message": "Введите значение в этой группе"
+  },
+  "customFields_validation_atLeastOneValueInGroup": {
+    "message": "Введите хотя бы одно значение в этой группе"
+  },
+  "customFields_validation_invalidEmailUsername": {
+    "message": "Выберите генератор имени эл. почты"
+  },
+  "customFields_validation_missingEmailUsernameList": {
+    "message": "Введите имена эл. почты"
+  },
+  "customFields_validation_missingEmailUsernameRegEx": {
+    "message": "Введите регулярное выражение"
+  },
+  "customFields_validation_invalidEmailHostname": {
+    "message": "Выберите генератор домена эл. почты"
+  },
+  "customFields_validation_missingEmailHostnameList": {
+    "message": "Введите домены эл. почты"
+  },
+  "customFields_dateTypeHelp": {
+    "message": "Используется moment.js для форматирования даты/времени. Изучите moment.js <a href=\"http://momentjs.com/docs/#/displaying/format/\" target=\"_blank\" rel=\"noopener noreferrer\">документацию</a>. Не используется для полей type=\"date\" "
+  },
+  "customFields_alNumHelp_uppercaseLetter": {
+    "message": "БУКВА ВЕРХНЕГО РЕГИСТРА"
+  },
+  "customFields_alNumHelp_lowercaseLetter": {
+    "message": "буква нижнего регистра"
+  },
+  "customFields_alNumHelp_upperAndLowercaseLetter": {
+    "message": "Буква (ВЕРХНЕГО или нижнего регистра)."
+  },
+  "customFields_alNumHelp_uppercaseConsonant": {
+    "message": "СОГЛАСНАЯ"
+  },
+  "customFields_alNumHelp_lowercaseConsonant": {
+    "message": "согласная"
+  },
+  "customFields_alNumHelp_upperAndLowercaseConsonant": {
+    "message": "Согласная (ВЕРХНЕГО или нижнего регистра)."
+  },
+  "customFields_alNumHelp_uppercaseVowel": {
+    "message": "ГЛАСНАЯ"
+  },
+  "customFields_alNumHelp_lowercaseVowel": {
+    "message": "гласная"
+  },
+  "customFields_alNumHelp_upperAndLowercaseVowel": {
+    "message": "Гласная (ВЕРХНЕГО или нижнего регистра)."
+  },
+  "customFields_alNumHelp_number09": {
+    "message": "Число, 0-9."
+  },
+  "customFields_alNumHelp_number19": {
+    "message": "Число, 1-9."
+  },
+  "customFields_alNumHelp_otherCharactersAsIs": {
+    "message": "Любой другой символ будет выведен как есть. Приведенные выше символы можно экранировать, заключив их в [квадратные скобки]."
+  },
+  "customFields_regExHelp": {
+    "message": "Используется <a href=\"http://fent.github.io/randexp.js/\" target=\"_blank\" rel=\"noreferrer noopener\">randexp.js</a> для генерации случайных данных на основе регулярных выражений"
+  },
+  "customFields_customFieldDetails": {
+    "message": "Инфо о польз. поле"
+  },
+  "customFields_label_dataType": {
+    "message": "Тип данных"
+  },
+  "customFields_label_friendlyName": {
+    "message": "Название"
+  },
+  "customFields_label_match": {
+    "message": "Соответствует"
+  },
+  "customFields_label_match_placeholder": {
+    "message": "Значения, разделенные запятыми, или регулярное выражение"
+  },
+  "customFields_label_match_helpText": {
+    "message": "Введите значения, разделенные запятыми (в нижнем регистре), или регулярное выражение. Убедитесь, что в вашем регулярном выражении нет запятой."
+  },
+  "customFields_label_template": {
+    "message": "Шаблон"
+  },
+  "customFields_label_telephoneTemplate_helpText": {
+    "message": "Используйте X вместо числа 1-9 и x вместо 0-9."
+  },
+  "customFields_label_minValue": {
+    "message": "Минимальное значение"
+  },
+  "customFields_label_maxValue": {
+    "message": "Максимальное значение"
+  },
+  "customFields_label_decimalPlaces": {
+    "message": "Десятичные"
+  },
+  "customFields_label_decimalPlaces_helpText": {
+    "message": "Количество знаков после точки, например, если введете 2, получите X.XX"
+  },
+  "customFields_label_minWords": {
+    "message": "Минимальное кол-во слов"
+  },
+  "customFields_label_maxWords": {
+    "message": "Максимальное кол-во слов"
+  },
+  "customFields_label_maxLength": {
+    "message": "Максимальная длина"
+  },
+  "customFields_label_format": {
+    "message": "Формат"
+  },
+  "customFields_label_pattern": {
+    "message": "Шаблон"
+  },
+  "customFields_label_listItems": {
+    "message": "Значения"
+  },
+  "customFields_label_listItems_placeholder": {
+    "message": "Введите каждое значение на новой строке"
+  },
+  "customFields_label_minDate": {
+    "message": "Минимальная дата"
+  },
+  "customFields_label_maxDate": {
+    "message": "Максимальная дата"
+  },
+  "customFields_label_datePrependText": {
+    "message": "Сегодня + "
+  },
+  "customFields_label_dateAppendText": {
+    "message": "дней, ИЛИ"
+  },
+  "customFields_label_date_helpText": {
+    "message": "Введите отрицательное значение, чтобы получить дату в прошлом."
+  },
+  "customFields_label_daysFromToday": {
+    "message": "дней, начиная с сегодня"
+  },
+  "customFields_label_hostname": {
+    "message": "Имя хоста"
+  },
+  "customFields_label_random": {
+    "message": "Рэндомно"
+  },
+  "customFields_label_previousUsername": {
+    "message": "Ранее сгенерированный юзернейм"
+  },
+  "customFields_label_previousName": {
+    "message": "Ранее сгенерированные имя и фамилия"
+  },
+  "customFields_dataType_select": {
+    "message": "-- выбор --"
+  },
+  "customFields_dataType_humanDataLabel": {
+    "message": "Человеческие данные"
+  },
+  "customFields_dataType_firstName": {
+    "message": "Имя"
+  },
+  "customFields_dataType_lastName": {
+    "message": "Фамилия"
+  },
+  "customFields_dataType_fullName": {
+    "message": "Полное имя"
+  },
+  "customFields_dataType_username": {
+    "message": "Юзернейм"
+  },
+  "customFields_dataType_emailAddress": {
+    "message": "Email"
+  },
+  "customFields_dataType_companyName": {
+    "message": "Компания/организация"
+  },
+  "customFields_dataType_telephone": {
+    "message": "Телефон"
+  },
+  "customFields_dataType_number": {
+    "message": "Число"
+  },
+  "customFields_dataType_date": {
+    "message": "Дата"
+  },
+  "customFields_dataType_url": {
+    "message": "URL"
+  },
+  "customFields_dataType_otherLabel": {
+    "message": "Другое"
+  },
+  "customFields_dataType_text": {
+    "message": "Текст"
+  },
+  "customFields_dataType_alphaNumeric": {
+    "message": "Буквы + цифры"
+  },
+  "customFields_dataType_regEx": {
+    "message": "Регулярное выражение"
+  },
+  "customFields_dataType_randomizedList": {
+    "message": "Рэндомный лист"
+  },
+  "customFields_delete_confirm_message": {
+    "message": "Удалить польз. поле?"
+  },
+  "customFields_label_hostName_randomLabel": {
+    "message": "Использовать рэндомное имя хоста"
+  },
+  "customFields_label_hostName_listLabel": {
+    "message": "Выберите из списка ниже:"
+  },
+  "customFields_label_hostName_listTextHelp": {
+    "message": "Введите имена хоста, разделяя их запятой. Можете использовать символ @"
+  },
+  "customFields_label_emailUsernamePrefix": {
+    "message": "Префикс юзернейма"
+  },
+  "customFields_label_username": {
+    "message": "Юзернейм"
+  },
+  "customFields_label_username_usernameLabel": {
+    "message": "Использовать ранее сгенерированный юзернейм"
+  },
+  "customFields_label_username_nameLabel": {
+    "message": "Использовать ранее сгенерированные имена и фамилии"
+  },
+  "customFields_label_username_randomLabel": {
+    "message": "Использовать рэндомное имя"
+  },
+  "customFields_label_username_listLabel": {
+    "message": "Выберите из списка (разделяйте каждое имя запятой):"
+  },
+  "customFields_label_username_regExLabel": {
+    "message": "Используйте регулярное выражение:"
+  },
+  "customFields_label_username_regExTextPlaceholder": {
+    "message": "Регулярное выражение"
+  },
+  "generalSettings_validation_enterPassword": {
+    "message": "Введите пароль"
+  },
+  "generalSettings_validation_enterAtLeastOneMatch": {
+    "message": "Выберите опцию"
+  },
+  "generalSettings_validation_invalidDefaultMaxLength": {
+    "message": "Максимальная длина по умолчанию должна быть больше 0"
+  },
+  "generalSettings_passwordSettings": {
+    "message": "Настройки пароля"
+  },
+  "generalSettings_fieldOptions": {
+    "message": "Опции полей"
+  },
+  "generalSettings_ignoreFieldsMatch": {
+    "message": "Игнорировать соответствие полей"
+  },
+  "generalSettings_ignoreHiddenFieldsLabel": {
+    "message": "Игнорировать все скрытые поля"
+  },
+  "generalSettings_ignoreFieldsWithContentLabel": {
+    "message": "Игнорировать заполненные поля"
+  },
+  "generalSettings_note": {
+    "message": "Примечание"
+  },
+  "generalSettings_ignoreFieldsWithContentHelp": {
+    "message": "<i>type=&quot;hidden&quot;</i> всегда игнорируются"
+  },
+  "generalSettings_confirmationFieldsMatch": {
+    "message": "Подтверждение соответствия полей"
+  },
+  "generalSettings_confirmFieldsHelp": {
+    "message": "Данные, введенные в предыдущее поле, будут использоваться для соответствующих любому из этих значений."
+  },
+  "generalSettings_agreeToTermsMatch": {
+    "message": "Совпадение полей Agree to Terms"
+  },
+  "generalSettings_agreeToTermsMatchHelp": {
+    "message": "Чекбоксы, соответствующие любому из этих значений, всегда будут отмечены"
+  },
+  "generalSettings": {
+    "message": "Общие настройки"
+  },
+  "generalSettings_triggerEvents": {
+    "message": "Триггеры"
+  },
+  "generalSettings_triggerEventsLabel": {
+    "message": "Клик/изменение в поле"
+  },
+  "generalSettings_contextMenu": {
+    "message": "Контекстное меню"
+  },
+  "generalSettings_contextMenuLabel": {
+    "message": "Добавить элементы в контекстное меню"
+  },
+  "generalSettings_defaultMaxLength": {
+    "message": "Максимальная длина"
+  },
+  "generalSettings_defaultMaxLength_help": {
+    "message": "Максимальное количество символов рэндомного текста (если поля не совпадают)."
+  },
+  "generalSettings_settingsSaved": {
+    "message": "Сохранено"
+  },
+  "generalSettings_matchFieldsUsing": {
+    "message": "Совпадение полей с использованием"
+  },
+  "generalSettings_matchFields_useLabel": {
+    "message": "Название поле"
+  },
+  "generalSettings_matchFields_useAriaLabel": {
+    "message": "aria-label"
+  },
+  "generalSettings_matchFields_useAriaLabelledBy": {
+    "message": "aria-labelledby"
+  },
+  "generalSettings_matchFields_useId": {
+    "message": "ID"
+  },
+  "generalSettings_matchFields_useName": {
+    "message": "Name"
+  },
+  "generalSettings_matchFields_useClass": {
+    "message": "Class"
+  },
+  "generalSettings_matchFields_usePlaceholder": {
+    "message": "Плейсхолдер"
+  },
+  "generalSettings_matchFields_mustSelectOneOption": {
+    "message": "Выберите опцию"
+  },
+  "generalSettings_matchFields_help": {
+    "message": "Посмотрите в разделе 'Польз. поля' как это работает"
+  },
+  "generalSettings_password": {
+    "message": "Пароль"
+  },
+  "generalSettings_password_randomLabel": {
+    "message": "Сгенерировать рэндомный пароль из 8 символов (логируется в консоли)"
+  },
+  "generalSettings_password_useThisLabel": {
+    "message": "Используйте:"
+  },
+  "generalSettings_passwordHelp": {
+    "message": "Оставьте это поле пустым, чтобы сгенерировать случайный пароль из 8 символов (логируется в консоли)."
+  },
+  "profile": {
+    "message": "Профиль"
+  },
+  "profiles": {
+    "message": "Профили"
+  },
+  "profiles_default_name": {
+    "message": "По умолчанию"
+  },
+  "profiles_delete_button_label": {
+    "message": "Удалить профиль"
+  },
+  "profiles_create_button_label": {
+    "message": "Новый профиль"
+  },
+  "profile_validation_missingName": {
+    "message": "Введите имя профиля"
+  },
+  "profile_validation_missingUrlMatch": {
+    "message": "Введите регулярное выражение, соответствующее URL"
+  },
+  "profile_modal_title": {
+    "message": "Детали профиля"
+  },
+  "profile_label_name": {
+    "message": "Имя профиля"
+  },
+  "profile_label_urlMatch": {
+    "message": "Выражение, соответствующее URL"
+  },
+  "profile_label_urlMatch_helpText": {
+    "message": "Введите регулярное выражение, соответствующее URL, к которому будет применяться этот профиль."
+  },
+  "profile_delete_confirm_message": {
+    "message": "Удалить профиль"
+  },
+  "profile_url_matching_expression": {
+    "message": "Выражение, соответствующее URL"
+  },
+  "profile_thisProfileDisabled": {
+    "message": "Профиль неактивен"
+  },
+  "matchedProfile": {
+    "message": "Совпадающий профиль"
+  },
+  "account_myAccount": {
+    "message": "Мой аккаунт"
+  },
+  "account_emailAddress": {
+    "message": "Email"
+  },
+  "account_edition": {
+    "message": "Edition"
+  },
+  "account_settingsLastUpdated": {
+    "message": "Настройки обновлены"
+  },
+  "account_logout": {
+    "message": "Выйти"
+  },
+  "account_password": {
+    "message": "Пароль"
+  },
+  "account_login": {
+    "message": "Войти"
+  },
+  "account_error_incorrectPassword": {
+    "message": "Неверный пароль"
+  },
+  "account_error_noAccount": {
+    "message": "Нет аккаунта в Fake Filler, привязанного к этой эл. почте"
+  },
+  "account_error_errorFetchingAccount": {
+    "message": "Не удалось получить инфо об аккаунте"
+  },
+  "account_error_unknownLoginError": {
+    "message": "Неизвестная ошибка при попытке войти"
+  },
+  "account_enableSync_title": {
+    "message": "Включить синхронизацию"
+  },
+  "account_enableSync_message": {
+    "message": "Сейчас ваши настройки не синхронизируются. Для синхронизации настроек во всех браузерах нажмите кнопку ниже"
+  },
+  "account_enableSync_button": {
+    "message": "Начать синхронизацию"
+  },
+  "account_enableSync_tip": {
+    "message": "<b>СОВЕТ</b>: Если Fake Filler установлен в нескольких браузерах, сначала включите синхронизацию в том, в котором вы в последний раз обновляли настройки. Они же появятся и в других браузерах"
+  },
+  "account_manageAccount": {
+    "message": "Управление аккаунтом"
+  },
+  "account_showSupportTitle": {
+    "message": "Купить подписку"
+  },
+  "account_showSupportMessage": {
+    "message": "Если расширение помогает вам в работе и не только, поддержите автора платной подпиской Fake Filler Pro. Благодаря вам расширение будет развиваться и дальше."
+  },
+  "account_showSupportButton": {
+    "message": "Купить Fake Filler Pro"
+  },
+  "upgradeToFakeFillerPro": {
+    "message": "Обновить до Fake Filler Pro"
+  }
+}
