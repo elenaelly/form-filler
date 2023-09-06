@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="../js/faker.js"></script>
+	<script src="../js/moment-with-locales.js"></script>
+	<script src="../js/faker-js-backwards-compatibility.js"></script>
+
+	<script src="./js/fake-dom-api.js"></script>
+	<script src="./js/sandbox-helper-functions.js"></script>
+	<script src="./js/fakedata-api.js"></script>
+
+	<script>
+		var faker_to_moment_locales = {
+			"en_AU": "en-au",
+			"en_AU_ocker": "en-au",
+			"en_BORK": "en",
+			"en_CA": "en-ca",
+			"fr_CA": "fr-ca",
+			"zh_CN": "zh-cn",
+			"zh_TW": "zh-tw",
+			"nl": "nl",
+			"en": "en",
+			"fa": "fa",
+			"fr": "fr",
+			"ge": "ka",
+			"de": "de",
+			"de_AT": "de-at",
+			"de_CH": "de-ch",
+			"en_GB": "en-gb",
+			"en_IND": "en-gb",
+			"id_ID": "id",
+			"en_IE": "en-ie",
+			"it": "it",
+			"ja": "ja",
+			"ko": "ko",
+			"nep": "ne",
+			"nb_NO": "nb",
+			"pl": "pl",
+			"pt_BR": "pt-br",
+			"ru": "ru",
+			"sk": "sk",
+			"es": "es",
+			"es_MX": "es-us",
+			"sv": "sv",
+			"tr": "tr",
+			"uk": "uk",
+			"en_US": "en",
+			"vi": "vi",
+			"ar": "ar",
+			"az": "az",
+			"cz": "cs",
+			"en_ZA": "en",
+			"fi": "fi",
+			"fr_CH": "fr-ch",
+			"nl_BE": "nl-be",
+			"pt_PT": "pt",
+			"ro": "ro",
+		};
+	</script>
+</head>
+<body>
+<div>
+	This page runs Custom Code generators for Fake Data inside an iframe
+</div>
+
+<script>
+	async function _message_run_code(e) {
+		try {
+
+			if (!e.data.run_code) {
+				throw 'No code received';
+			}
+
+			let element = null;
+			if (e.data.element && typeof e.data.element == 'object' && e.data.element.element_id && e.data.element.type == "DOMProxyElement") {
+				element = FakeDomElement.getOrCreateFakeDomElement(e.data.element);
+			}
+
+			var storage = getStorage();
+
+			faker.locale = storage.language;
+			moment.locale(faker_to_moment_locales[faker.locale]);
+
+			var run_result = await runCode(e.data.run_code, element);
+
+			sendDataToParent({
+				type:          'run_result',
+				text:          run_result,
+				text_type:     typeof run_result,
+				error:         false,
+				promise_id:    e.data.promise_id,
+			});
+		} catch (ex) {
+			sendDataToParent({
+				type:          'run_result',
+				text:          null,
+				text_type:     typeof null,
+				error:         ex.message,
+				promise_id:    e.data.promise_id,
+			});
+		}
+	}
+
+	window.addEventListener('message', function(e) {
+		if (e.ports && e.ports[0]) {
+			communication_port = e.ports[0];
+			communication_port.onmessage = onMessage;
+		}
+	});
+
+	function onMessage(e) {
+		if (!e || !e.data) {
+			return;
+		}
+
+		if (!communication_port) {
+			return;
+		}
+
+		if (!e.data.from_fakedata) {
+			return;
+		}
+
+		if (e.data.storage) {
+			initStorage(e.data.storage);
+		}
+
+		if (e.data.type == 'run_code') {
+			_message_run_code(e)
+		} else if (e.data.type == "request_fake_dom_data_response") {
+			let global_promise = getGlobalPromise(e.data.promise_id);
+			if (global_promise && e.data.data) {
+				global_promise.resolve(e.data.data);
+			}
+		} else if (e.data.type == 'dom_event_triggered') {
+			onMessageReceived_DomEventTriggered(e.data);
+		} else if (e.data.type == 'call_fakedata_global_func_response') {
+			onMessageReceived_GlobalFuncResponse(e.data);
+		} else if (e.data.type == 'fd_register_element_event_happened') {
+			onMessageReceived_RegisteredElementEvent(e.data);
+		} else {
+			console.log('[sandbox] got unknown message', e.data.type, e);
+		}
+	};
+</script>
+</body>
+</html>
