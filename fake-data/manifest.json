@@ -16,16 +16,16 @@
   "homepage_url": "https://www.fakedata.pro/",
   "commands": {
     "command-fill-active-field": {
-      "description": "Fill active field"
+      "description": "Заполнить поле"
     },
     "command-fill-active-form": {
-      "description": "Fill active form"
+      "description": "Заполнить форму"
     },
     "command-fill-entire-page": {
-      "description": "Fill entire page"
+      "description": "Заполнить страницу"
     },
     "command-manage-active-field": {
-      "description": "Manage active field"
+      "description": "Изменить поле"
     }
   },
   "name": "Fake Data - A form filler you won't hate",

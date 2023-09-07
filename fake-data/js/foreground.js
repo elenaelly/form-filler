@@ -43,13 +43,13 @@ setTimeout(function(){
 		'number': true,
 	};
 	var custom_integrations = {
-		select2: false,
-		angular_material: false,
-		google_sheets: false,
-		public_api_support: false,
-		google_forms: false,
-		react_select: false,
-		vuetify: false,
+		select2: true,
+		angular_material: true,
+		google_sheets: true,
+		public_api_support: true,
+		google_forms: true,
+		react_select: true,
+		vuetify: true,
 	};
 	
 	var registeredElements = {};

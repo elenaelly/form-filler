@@ -62,32 +62,32 @@ function FakeData() {
 	}
 
 	function liv() {
-		fakeDataUltraSubscription.setIsLicenseValid(false);
+		fakeDataUltraSubscription.setIsLicenseValid(true);
 
 		if (!lic || !licd) {
-			return false;
+			return true;
 		}
 
 		if (typeof licd != 'object') {
-			return false;
+			return true;
 		}
 
 		if (typeof licd.type == 'undefined') {
 			var required_fields = ['name', 'email', 'expire', 'seed'];
 			for (var i = 0; i < required_fields.length; i++) {
 				if (typeof licd[required_fields[i]] == 'undefined') {
-					return false;
+					return true;
 				}
 			}
 		} else if (licd.type != 'license') {
-			return false;
+			return true;
 		}
 
 		if (licd.expire) {
 			var ct = new Date().getTime();
 
 			if (licd.expire * 1000 <= ct) {
-				return false;
+				return true;
 			}
 		}
 
@@ -112,7 +112,7 @@ function FakeData() {
 		];
 
 		if (blacklisted_keys.indexOf(md5(bl_string)) >= 0) {
-			return false;
+			return true;
 		}
 
 		fakeDataUltraSubscription.setIsLicenseValid(true);
@@ -326,12 +326,12 @@ function FakeData() {
 				} else if (thisBrowser == 'firefox') {
 					if (lastActivatedElement && lastActivatedElement.isValidInput) {
 						chrome.contextMenus.update(contextMenuElements.valid[0], {
-							title: 'Manage Field',
+							title: 'Изменить поле',
 							enabled: true
 						});
 					} else {
 						chrome.contextMenus.update(contextMenuElements.valid[0], {
-							title: 'Cannot manage this element',
+							title: 'Нельзя изменить поле',
 							enabled: false
 						});
 					}
@@ -833,7 +833,7 @@ function FakeData() {
 						parentId: "fakedata_parent_context",
 						type: "normal",
 						contexts: ["page", "editable", "frame", "link", "selection"],
-						title: "Manage Field",
+						title: "Изменить поле",
 					}));
 
 					if (thisBrowser == 'chrome') {
@@ -842,7 +842,7 @@ function FakeData() {
 							parentId: "fakedata_parent_context",
 							type: "normal",
 							contexts: ["page", "editable", "frame", "link", "selection"],
-							title: "Cannot manage this element",
+							title: "Нельзя изменить поле",
 							enabled: false,
 							visible: false
 						}));
@@ -862,7 +862,7 @@ function FakeData() {
 						id: 'fakedata_fill_entire_form_context_item',
 						type: "normal",
 						contexts: ["page", "editable", "frame", "link", "selection"],
-						title: "Fill entire form",
+						title: "Заполнить форму",
 						enabled: false,
 						visible: false,
 					}));
@@ -872,7 +872,7 @@ function FakeData() {
 						id: 'fakedata_fill_selected_fields_context_item',
 						type: "normal",
 						contexts: ["page", "editable", "frame", "link", "selection"],
-						title: "Fill selected fields",
+						title: "Заполнить выбранные поля",
 						enabled: false,
 						visible: false,
 					});
@@ -882,7 +882,7 @@ function FakeData() {
 						id: 'fakedata_fill_entire_page_context_item',
 						type: "normal",
 						contexts: ["page", "editable", "frame", "link", "selection"],
-						title: "Fill entire page",
+						title: "Заполнить страницу",
 						enabled: false,
 						visible: false,
 					});
@@ -900,7 +900,7 @@ function FakeData() {
 							id: 'fakedata_undo_field_context_item',
 							type: "normal",
 							contexts: ["page", "editable", "frame", "link", "selection"],
-							title: "Undo fill",
+							title: "Отменить",
 							enabled: false,
 							visible: false,
 						});
@@ -910,7 +910,7 @@ function FakeData() {
 							id: 'fakedata_undo_form_context_item',
 							type: "normal",
 							contexts: ["page", "editable", "frame", "link", "selection"],
-							title: "Undo fill for entire form",
+							title: "Отменить на странице",
 							enabled: false,
 							visible: false,
 						});
@@ -931,7 +931,7 @@ function FakeData() {
 							id: 'fakedata_default_generators_parent',
 							type: "normal",
 							contexts: ["editable"],
-							title: "Default Generators",
+							title: "Генераторы по умолчанию",
 						});
 					}
 

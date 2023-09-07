@@ -2,14 +2,14 @@ var fdUltraSubscription = (function() {
 	
 	var subact = null;
 	var intervalCheckLicense = null;
-	var allow_online_connections = false;
+	var allow_online_connections = true;
 	var dataPollStarted = false;
-	var dataPollIntervalSeconds = 30;
+	var dataPollIntervalSeconds = null;
 	var dataPollTimeout = null;
 	
 	var licenseKey = null;
 	var licenseObject = null;
-	var licenseIsValid = false;
+	var licenseIsValid = true;
 	var userPrefs = null;
 	
 	var poll_loaded_data = {
@@ -34,7 +34,7 @@ var fdUltraSubscription = (function() {
 		}
 	};
 	
-	var max_entries_per_page = 25;
+	var max_entries_per_page = 35;
 	
 	var visible_notifications = {};
 	
